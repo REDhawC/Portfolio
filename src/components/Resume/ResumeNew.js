@@ -9,7 +9,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
-  "https://raw.githubusercontent.com/soumyajit4419/portfolio/master/src/Assets/haochen_CV.pdf";
+  "https://raw.githubusercontent.com/REDhawC/Portfolio/main/src/Assets/haochen_CV.pdf";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -30,7 +30,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download CV <br/>from  GitHub
           </Button>
         </Row>
 
