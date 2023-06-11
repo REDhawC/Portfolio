@@ -37,7 +37,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          <p style={{ color: "rgb(183, 157, 199)" }}>
             "Thank you for taking the time to visit my website
             , and I look forward to connecting with you further."{" "}
           </p>
