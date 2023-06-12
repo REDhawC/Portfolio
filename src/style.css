@@ -727,8 +727,14 @@ button:focus {
 
 .btn-primary:hover {
   color: var(--dark-default-font-color) !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: var(--dark-imp-text-color) !important;
+  border-color: var(--dark-imp-text-color)  !important;
+}
+
+#light .btn-primary:hover {
+  color: var(--dark-default-font-color) !important;
+  background-color: var(--light-imp-text-color) !important;
+  border-color: var(--light-imp-text-color)  !important;
 }
 
 .btn:focus {
