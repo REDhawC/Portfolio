@@ -14,10 +14,10 @@ import {
   AiOutlineUser,
   AiOutlineLinkedin,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
+import ReactSwitch from 'react-switch';
 
-function NavBar() {
+function NavBar({toggleTheme,theme}) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -103,16 +103,9 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
-              <Button
-                href="#"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                dark mode
-                {/* <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} /> */}
-              </Button>
+            <Nav.Item className="switch">
+              <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'}></ReactSwitch>
+              <p>dark mode</p>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

@@ -16,9 +16,20 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import libs for dark-light mode
+import { createContext } from 'react';
+import Particle from './components/Particle'
+
+export const themeContext = createContext(null)
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  // add dark-light theme state 
+  const [theme, setTheme] = useState('dark')
+  // add dark-light theme toggler
+  const toggleTheme = (curr) => {
+    setTheme((curr) => { return curr === 'light' ? 'dark' : 'light' })
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,21 +39,34 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.add(theme);
+    return () => {
+      document.body.classList.remove(theme);
+    };
+  }, [theme]);
+
+
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
+      <themeContext.Provider value={{ theme, toggleTheme }}>
+        <div id={theme}>
+          <Preloader load={load} />
+          <div className="App" id={load ? "no-scroll" : "scroll"}>
+            <Navbar toggleTheme={toggleTheme} theme={theme}/>
+            <Particle theme={theme}></Particle>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/project" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+            <Footer />
+          </div>
+        </div>
+      </themeContext.Provider>
     </Router>
   );
 }
