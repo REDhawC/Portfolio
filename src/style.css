@@ -17,7 +17,7 @@ html {
   --dark-other-bg-color: rgb(10, 4, 22);
 
   --dark-lighter-other-bg-color: #2d1950;
-  
+
   /* light mode color settings */
 
   --light-other-bg-color: #E3CAA5;
@@ -210,7 +210,7 @@ button:focus {
 }
 
 #light .navbar-nav .nav-link {
-  color: var(--light-default-font-color) !important;
+  color: var(--light-imp-text-color) !important;
 }
 
 .nav-link {
@@ -386,7 +386,7 @@ button:focus {
 }
 
 #light .Typewriter__cursor {
-  color: var(--light-imp-text-color) !important;
+  color: var(--light-other-bg-color) !important;
 }
 
 @media (max-width: 767px) {
@@ -407,6 +407,7 @@ button:focus {
 }
 
 .myAvatar .img-fluid {
+  border-radius: 25px;
   max-width: 70% !important;
   transition: all 0.7s ease-out 0s;
 }
@@ -415,6 +416,7 @@ button:focus {
   box-sizing: content-box;
   border: 0.5em solid #fff;
   box-shadow: 0 0 40px var(--dark-imp-text-color);
+  border-radius: 0px;
   transition: all 0.7s ease-out 0s;
 }
 
@@ -445,6 +447,10 @@ button:focus {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
+
+  .myAvatar .img-fluid {
+    max-width: 50% !important;
+  }
 }
 
 .home-about-section {
@@ -461,7 +467,7 @@ button:focus {
 }
 
 #light .home-about-description {
-  color: var(--light-default-font-color)!important;
+  color: var(--light-default-font-color) !important;
 }
 
 .home-about-body {
@@ -477,7 +483,7 @@ button:focus {
 }
 
 #light .home-about-social {
-  color:var(--light-default-font-color) !important;
+  color: var(--light-default-font-color) !important;
 }
 
 .home-about-social-links {
@@ -549,12 +555,12 @@ button:focus {
   padding-left: 15px;
 }
 
-.social-icons a{
-  color:var(--dark-default-font-color)
+.social-icons a {
+  color: var(--dark-default-font-color)
 }
 
-#light .social-icons a{
-  color:var(--light-imp-text-color)
+#light .social-icons a {
+  color: var(--light-imp-text-color)
 }
 
 .icon-colour {
@@ -562,7 +568,7 @@ button:focus {
 }
 
 #light .icon-colour {
-  color: var(--light-other-bg-color) !important;
+  color: var(--light-imp-text-color) !important;
 }
 
 /* --------- */
@@ -640,12 +646,12 @@ button:focus {
 }
 
 .card-title {
-  color:var(--dark-default-font-color) !important;
+  color: var(--dark-default-font-color) !important;
   font-weight: bolder;
 }
 
 #light .card-title {
-  color:var(--light-imp-text-color) !important;
+  color: var(--light-imp-text-color) !important;
 }
 
 .project-card-view {
@@ -728,13 +734,13 @@ button:focus {
 .btn-primary:hover {
   color: var(--dark-default-font-color) !important;
   background-color: var(--dark-imp-text-color) !important;
-  border-color: var(--dark-imp-text-color)  !important;
+  border-color: var(--dark-imp-text-color) !important;
 }
 
 #light .btn-primary:hover {
   color: var(--dark-default-font-color) !important;
   background-color: var(--light-imp-text-color) !important;
-  border-color: var(--light-imp-text-color)  !important;
+  border-color: var(--light-imp-text-color) !important;
 }
 
 .btn:focus {
@@ -761,7 +767,7 @@ button:focus {
 }
 
 #light .about-section {
-  background-image: none!important;
+  background-image: none !important;
   color: var(--light-default-font-color) !important;
 }
 
@@ -845,7 +851,7 @@ button:focus {
 }
 
 #light .resume-section {
-  background-image: none!important;
+  background-image: none !important;
   color: var(--light-default-font-color) !important;
 }
 
@@ -969,7 +975,7 @@ button:focus {
 }
 
 #light .switch {
-  color: var(--light-default-font-color);
+  color: var(--light-imp-text-color);
 }
 
 /* fork-btn stuff */
