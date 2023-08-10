@@ -2,12 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+import editor from "../../Assets/Projects/redbookProj.png";
 import chatify from "../../Assets/Projects/financialDashboard.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import bitsOfCode from "../../Assets/Projects/messengerProj.png";
 
 function Projects() {
   return (
@@ -32,14 +29,14 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Red-Messenger"
+              description="Red-Messenger is a cutting-edge real-time chat application designed to connect users seamlessly and securely. With its intuitive interface and advanced features, Red-Messenger offers a dynamic and engaging communication experience."
+              ghLink="https://github.com/REDhawC/red-messenger"
+              demoLink="https://red-messenger.vercel.app/"
             />
           </Col>
 
@@ -47,14 +44,14 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="RedBook"
+              description="Welcome to RedBook, a vibrant and engaging photo-sharing social media platform that connects people from all walks of life. Designed with a sleek and modern interface, RedBook offers a seamless user experience that will keep you entertained and connected."
+              ghLink="https://github.com/REDhawC/redbook"
+              demoLink="https://redbook-hao-chen.netlify.app/"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          {/*<Col md={4} className="project-card">
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
