@@ -12,7 +12,7 @@ function AboutCard() {
             from <span className="purple"> Shantou, China.</span>
             <br />
             <br />I am a junior pursuing <span className="purple">MSC in Business Analytics </span>
-            in <span className="purple"> the University of Edinbough</span>
+            in <span className="purple"> the University of Edinburgh</span>
             , and I am passionate about using data to drive business decisions.
             <br />
             <br />In addition to my academic pursuits,

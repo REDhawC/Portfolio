@@ -17,19 +17,25 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              <br />I am a junior pursuing <span className="purple">MSC in Business Analytics </span>
+              in <span className="purple"> the University of Edinburgh</span>
+              , and I am passionate about using data to drive business decisions.
               <br />
-              <br />I am fluent in classics like
+              <br />In addition to my academic pursuits,
+              I also have experience in <span className="purple">front-end</span> development and <span className="purple">coding</span>.
+              I enjoy using my technical skills to create engaging and user-friendly websites and applications.
+              <br />
+              <br />
+              I am fluent in classics like
               <i>
                 <b className="purple"> Javascript and Python. </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My field of Interest's are building new&nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">web applications </b>and
+                areas related to{" "}
                 <b className="purple">
                   Business Analytics.
                 </b>
@@ -43,6 +49,11 @@ function Home2() {
               <i>
                 <b className="purple"> React.js</b>
               </i>
+              <br/>
+              <br/>
+              <p>
+                I am characterized by <b className="purple">loyalty, flexibility, commitment, honesty, hard work, and adaptability</b>, and I approach work with great enthusiasm. I believe that by combining these strengths with my skills and knowledge, I can make a positive impact on your team. I am very excited about the opportunity to further discuss how I can contribute to your organization. Thank you!
+              </p>
             </p>
           </Col>
           <Col md={4} className="myAvatar">
