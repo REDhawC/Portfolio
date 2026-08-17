@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/profile.png";
 import myImgBack from "../../Assets/profile_back.png";
+import petabitLogo from "../../Assets/petabit_logo.svg";
+import uoeLogo from "../../Assets/uoe_logo.png";
+import njauLogo from "../../Assets/njau_logo.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -9,8 +12,13 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import Techstack from "../About/Techstack";
 import Toolstack from "../About/Toolstack";
+import Button from "react-bootstrap/Button";
+import { CgWebsite } from "react-icons/cg";
+
 
 function Home2() {
+
+  const ColWidth = [4, 4, 2, 2]; // 定义每列的宽度
 
   // 3. 定义一个状态，记录当前是否处于翻转状态，默认是 false (正面)
   const [isFlipped, setIsFlipped] = useState(false);
@@ -23,68 +31,10 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
+        <h1 style={{ fontSize: "2.6em" }}>
+          LET ME <span className="purple"> INTRODUCE </span> MYSELF
+        </h1>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
-            <br />
-            <br />
-            <Container style={{ fontSize: "1.2em" }}>
-              <Row>
-                <Col md={6}>
-                  2026.04 ~ PRESENT
-                </Col>
-                <Col md={4}>
-                  <span className="purple">IT Engineer</span>, Patabit.co ltd, Kobe, Japan
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col md={6}>
-                  2023.09 ~ 2024.12
-                </Col>
-                <Col md={4}>
-                  MSc in <span className="purple">Business Analytics</span>, University of Edinburgh, UK
-                </Col>
-              </Row>
-              <br />
-              <Row>
-                <Col md={6}>
-                  2019.09 ~ 2023.06
-                </Col>
-                <Col md={4}>
-                  BM in <span className="purple">Accounting</span>, Nanjing Agricultural University, China
-                </Col>
-              </Row>
-            </Container>
-
-            <p className="home-about-body">
-              I graduated with a <span className="purple">MSC in Business Analytics </span>
-              in <span className="purple"> the University of Edinburgh</span>
-              , and I am passionate about using data to drive business decisions and creating engaging and user-friendly websites and applications.
-              <br />
-              <br />
-              I am fluent in classics like
-              <i>
-                <b className="purple"> Javascript and Python. </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              {" "}
-              Modern Javascript Library and Frameworks like
-              <i>
-                <b className="purple"> React.js</b>
-              </i>
-              <br />
-              <br />
-              <p>
-                I am characterized by <b className="purple">loyalty, flexibility, commitment, honesty, hard work, and adaptability</b>, and I approach work with great enthusiasm. I believe that by combining these strengths with my skills and knowledge, I can make a positive impact on your team. I am very excited about the opportunity to further discuss how I can contribute to your organization. Thank you!
-              </p>
-            </p>
-          </Col>
           <Col md={4} className="myAvatar">
             <Tilt>
               {/* 5. 这里的 onClick 接管点击事件，控制翻转 */}
@@ -108,6 +58,99 @@ function Home2() {
               </div>
             </Tilt>
           </Col>
+          <Col md={12} className="home-about-description">
+            <br />
+            <br />
+            <Container style={{ fontSize: "1.2em" }}>
+              <Row>
+                <Col md={ColWidth[0]}>
+                  2026.04 ~ PRESENT
+                </Col>
+                <Col md={ColWidth[1]}>
+                  <span className="purple">IT Engineer</span>, <br />Patabit.co ltd, Kobe, Japan
+                </Col>
+                <Col md={ColWidth[2]}>
+                  <a className="resume-org-icon" href="https://www.petabit.co.jp/" target="_blank" rel="noreferrer">
+                    <img src={petabitLogo} className="img-fluid" alt="icon-petabit" />
+                  </a>
+                </Col>
+                <Col md={ColWidth[3]}>
+                  <Button
+                    variant="primary"
+                    href="https://www.petabit.co.jp/"
+                    target="_blank"
+                  >
+                    {"Related Projects"}
+                  </Button>
+                </Col>
+              </Row>
+              <br />
+              <Row>
+                <Col md={ColWidth[0]}>
+                  2023.09 ~ 2024.12
+                </Col>
+                <Col md={ColWidth[1]}>
+                  MSc in <span className="purple">Business Analytics</span>, <br />University of Edinburgh, UK
+                </Col>
+                <Col md={ColWidth[2]}>
+                  <a className="resume-org-icon uoe-icon" href="https://www.business-school.ed.ac.uk/msc/business-analytics" target="_blank" rel="noreferrer">
+                    <img src={uoeLogo} className="img-fluid" alt="icon-edinburgh" />
+                  </a>
+
+                </Col>
+                <Col md={ColWidth[3]}>
+                  <Button
+                    variant="primary"
+                    href="https://www.patabit.co.jp/"
+                    target="_blank"
+                  >
+                    {"Related Projects"}
+                  </Button>
+                </Col>
+              </Row>
+              <br />
+              <Row>
+                <Col md={ColWidth[0]}>
+                  2019.09 ~ 2023.06
+                </Col>
+                <Col md={ColWidth[1]}>
+                  BM in <span className="purple">Accounting</span>, <br />Nanjing Agricultural University, China
+                </Col>
+                <Col md={ColWidth[2]}>
+                  <a className="resume-org-icon njau-icon" href="https://rsrcw.njau.edu.cn/en/index.htm" target="_blank" rel="noreferrer">
+                    <img src={njauLogo} className="img-fluid" alt="icon-njau" />
+                  </a>
+                </Col>
+                <Col md={ColWidth[3]}>
+                  <Button
+                    variant="primary"
+                    href="https://www.patabit.co.jp/"
+                    target="_blank"
+                  >
+                    {"Related Projects"}
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
+            <Col md={12}>
+              <p className="home-about-body">
+                I'm originally from <span className="purple">Shantou, China</span>
+                , and currently based in <span className="purple">Kobe, Japan</span>,
+                working as a Frontend Developer while building toward roles that bridge business and technology.
+                <br />
+                <br />
+                My background sits at the intersection of the two — an <span className="purple">accounting</span> degree gave me a foundation in financial analysis,
+                and my <span className="purple">MSc in Business Analytics</span> pushed me toward data-driven problem solving,
+                which eventually led me into frontend development and coding.
+                <br />
+                <br />
+                I'm native in <span className="purple">Mandarin Chinese</span>, almost native in <span className="purple">English (IELTS 7.5)</span> and fluent in <span className="purple">Japanese (JLPT N2, aiming for N1)</span>,
+                and I enjoy operating across languages and disciplines just as much as across the stack.
+              </p>
+            </Col>
+
+          </Col>
+
         </Row>
         <Row>
           <Container className="about-section">
