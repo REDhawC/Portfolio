@@ -79,7 +79,6 @@ function Home2() {
                   <Button
                     variant="primary"
                     href="/project"
-                    target="_blank"
                   >
                     {"Related Projects"}
                   </Button>
