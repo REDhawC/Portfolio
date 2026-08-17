@@ -14,6 +14,7 @@ import Techstack from "../About/Techstack";
 import Toolstack from "../About/Toolstack";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
+import { HashLink } from "react-router-hash-link";
 
 
 function Home2() {
@@ -77,7 +78,7 @@ function Home2() {
                 <Col md={ColWidth[3]}>
                   <Button
                     variant="primary"
-                    href="https://www.petabit.co.jp/"
+                    href="/project"
                     target="_blank"
                   >
                     {"Related Projects"}
@@ -99,11 +100,7 @@ function Home2() {
 
                 </Col>
                 <Col md={ColWidth[3]}>
-                  <Button
-                    variant="primary"
-                    href="https://www.patabit.co.jp/"
-                    target="_blank"
-                  >
+                  <Button as={HashLink} smooth to="/project#undergrad-projects" variant="primary">
                     {"Related Projects"}
                   </Button>
                 </Col>
@@ -122,11 +119,7 @@ function Home2() {
                   </a>
                 </Col>
                 <Col md={ColWidth[3]}>
-                  <Button
-                    variant="primary"
-                    href="https://www.patabit.co.jp/"
-                    target="_blank"
-                  >
+                  <Button as={HashLink} smooth to="/project#undergrad-projects" variant="primary">
                     {"Related Projects"}
                   </Button>
                 </Col>

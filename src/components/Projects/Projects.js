@@ -9,6 +9,7 @@ import drinkmateLogo from "../../Assets/Projects/drinkmate-logo.png";
 import petabitLogo from "../../Assets/petabit_logo.svg";
 import ecd2Logo from "../../Assets/Projects/logo_ecdirect.svg";
 
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -49,7 +50,7 @@ function Projects() {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container id="undergrad-projects">
         <h1 className="project-heading">
           My <strong className="purple">Undergrad and Postgrad</strong> Projects
         </h1>
