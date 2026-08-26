@@ -965,6 +965,35 @@ button:focus {
   filter: drop-shadow(0 0 5px rgba(56, 239, 125, 0.7)) drop-shadow(0 0 15px rgba(17, 153, 142, 0.5));
 }
 
+/* 基础状态：给 SVG 和文字加上过渡动画 */
+.tech-icon-wrapper svg.animated-svg-icon,
+.tech-icon-label {
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🚀 Hover 触发器 (挂在 wrapper 上，确保鼠标碰到容器时，图标和文字一起变身) */
+.tech-icons:hover {
+  cursor: pointer;
+}
+
+/* —— 图标特效 (接管 SVG Fill) —— */
+.tech-icons:hover svg.animated-svg-icon {
+  /* 使用 React 里面定义的动态渐变色 */
+  fill: url(#starry-purple-gradient);
+  /* fill: url(#forest-gradient); */
+
+  /* 挂上森林绿光晕 */
+  filter: drop-shadow(0 0 5px rgba(178, 36, 239, 0.8)) drop-shadow(0 0 15px rgba(117, 121, 255, 0.6));
+
+  /* 悬浮放大 */
+  transform: translateY(5px) scale(1.05);
+}
+
+.light .tech-icons:hover svg.animated-svg-icon {
+  fill: url(#forest-gradient);
+  filter: drop-shadow(0 0 8px rgba(56, 239, 125, 0.8)) drop-shadow(0 0 15px rgba(17, 153, 142, 0.5));
+}
+
 /* 3. 引擎：星空色彩流转动画 */
 @keyframes starlightFlow {
   0% {
