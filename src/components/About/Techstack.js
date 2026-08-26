@@ -12,47 +12,34 @@ import {
   DiGit,
   DiPhp,
 } from "react-icons/di";
-import {
-  SiVuedotjs,
-  SiNuxtdotjs,
-} from "react-icons/si";
+import { SiVuedotjs, SiNuxtdotjs } from "react-icons/si";
+
+// 图标与名称绑定，统一维护
+const techStackList = [
+  { Icon: DiJavascript1, label: "JavaScript" },
+  { Icon: DiPhp, label: "PHP" },
+  { Icon: SiNuxtdotjs, label: "Nuxt.js" },
+  { Icon: SiVuedotjs, label: "Vue.js" },
+  { Icon: DiNodejs, label: "Node.js" },
+  { Icon: DiReact, label: "React" },
+  { Icon: DiMysql, label: "MySQL" },
+  { Icon: DiGit, label: "Git" },
+  { Icon: DiHtml5, label: "HTML5" },
+  { Icon: DiPython, label: "Python" },
+  { Icon: DiCss3, label: "CSS3" },
+];
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPhp />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNuxtdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVuedotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
+      {techStackList.map(({ Icon, label }) => (
+        <Col xs={4} md={2} className="tech-icons" key={label}>
+          <div className="tech-icon-wrapper">
+            <Icon />
+            <span className="tech-icon-label">{label}</span>
+          </div>
+        </Col>
+      ))}
     </Row>
   );
 }

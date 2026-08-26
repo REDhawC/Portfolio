@@ -263,6 +263,10 @@ button:focus {
     padding-right: 15px !important;
     padding-left: 15px !important;
   }
+
+  .project-card-view .card-text {
+    font-size: 3.3vw;
+  }
 }
 
 .navbar-brand {
@@ -705,11 +709,37 @@ button:focus {
 }
 
 .project-card {
+  position: relative;
   padding-top: 50px !important;
   padding-bottom: 50px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+}
+
+.project-card-view .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* 撑满卡片剩余空间 */
+}
+
+.project-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.project-card-view .card-text {
+  flex: 1;
+  overflow: hidden;
+}
+
+.project-card .button-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .card-title {
@@ -869,6 +899,85 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+}
+
+.tech-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tech-icon-label {
+  position: absolute;
+  font-size: 1rem !important;
+
+  /* 偏移量：负值代表往icon上方移，正值往下方移 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tech-icon-label {
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.tech-icons:hover .tech-icon-label {
+  /* —— 星云流转渐变 —— */
+  background: linear-gradient(-45deg,
+      #b224ef,
+      /* 霓虹深紫 */
+      #7579ff,
+      /* 幽暗星空蓝 */
+      #ffb199,
+      /* 恒星粉 */
+      #e0c3fc
+      /* 星光白 */
+    );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: starlightFlow 3s ease infinite;
+
+  filter: drop-shadow(0 0 5px rgba(178, 36, 239, 0.8)) drop-shadow(0 0 15px rgba(117, 121, 255, 0.6));
+  font-size: 1.25rem !important;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.light .tech-icons:hover .tech-icon-label {
+  /* —— 郁郁葱葱的森林渐变 —— */
+  background: linear-gradient(-45deg,
+      #11998e,
+      /* 幽邃冷杉 (深青绿，压住底色保证对比度) */
+      #15b93e,
+      /* 盛夏密林 (充满生机的正绿) */
+      #38ef7d,
+      /* 荧光苔藓 (带点霓虹的亮绿，核心发光色) */
+      #a8ff78
+      /* 晨光透叶 (最亮的黄绿，模拟阳光穿透树叶) */
+    );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 0 5px rgba(56, 239, 125, 0.7)) drop-shadow(0 0 15px rgba(17, 153, 142, 0.5));
+}
+
+/* 3. 引擎：星空色彩流转动画 */
+@keyframes starlightFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #light .tech-icons {
