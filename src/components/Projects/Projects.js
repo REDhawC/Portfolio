@@ -45,7 +45,7 @@ function Projects() {
               isBlog={false}
               title="DrinkMate | Landing Page Development"
               description="Coded ABOUT and HOWTO pages; diagnosed and fixed a CSS animation bug during hover effect implementation."
-              demoLink="https://www.drinkmate.jp/how-to.php"
+              demoLink="https://www.drinkmate.jp/howto/"
             />
           </Col>
         </Row>
